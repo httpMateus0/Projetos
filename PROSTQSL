@@ -1,6 +1,12 @@
-"id","nome","telefone","data_nascimento","data_criacao"
-1,"G DELICIA","859999","2000-05-13","2026-08-08 20:00:51.56837"
-3,"MADU SATURNO","8599991","2005-10-20","2026-08-08 20:54:13.219781"
-8,"SASUKE","87495","1958-10-10","2026-08-08 22:09:37.409407"
-9,"MADARA","85971","18090-08-10","2026-08-08 22:17:36.666822"
-10,"NARUTO","859369","2026-12-17","2026-08-09 14:40:23.997983"
+CREATE TABLE usuarios( 
+ id SERIAL PRIMARY KEY,
+ nome VARCHAR(50) NOT NULL,
+ telefone VARCHAR(50) NOT NULL,
+ data_nascimento DATE NOT NULL,
+ data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO usuarios (nome, telefone, data_nascimento) VALUES 
+('João Silva', '11999999999', '1990-01-01'),
+('Maria Santos', '11888888888', '1985-05-15'),
+('Pedro Almeida', '11777777777', '1992-12-10');
